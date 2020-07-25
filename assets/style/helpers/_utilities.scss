@@ -1,0 +1,72 @@
+// base
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+// font-size
+.font-size-base {
+  font-size: $font-size-base; // 16px
+}
+.font-size-xl {
+  font-size: $font-size-xl;   // 20px
+}
+.font-size-lg {
+  font-size: $font-size-lg;   // 18px
+}
+.font-size-sm {
+  font-size: $font-size-sm;   // 14px
+}
+.font-size-28 {
+  font-size: 1.75rem;        // 28px
+}
+.font-size-62 {
+  font-size: 3.875rem;        // 62px
+}
+.h2 {
+  font-size: 1.625rem;
+  @include pad() {
+    font-size: $h2-font-size;
+  }
+}
+
+// font-weight
+.font-weight-normal {
+  font-weight: 400;
+}
+.font-weight-light {
+  font-weight: 300;
+}
+
+// size
+.w-33 {
+  width: 33.33%;
+}
+.h-24 {
+  height: 24px;
+}
+.h-40 {
+  height: 40px;
+} 
+@include pad() {
+  .h-md-30 {
+    height: 30px;
+  } 
+}
+
+// color
+.opacity-40 {
+  opacity: 0.6;
+}
+
+//
+@include pad() {
+  .pr-md-15 {
+    padding-right: 15px !important;
+  }
+}

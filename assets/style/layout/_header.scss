@@ -1,0 +1,18 @@
+.barndLogo {
+  height: 40px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background: url('../assets/images/banner.jpg') center no-repeat;
+  background-size: cover;
+  &:before {
+    content: '';
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}

@@ -1,0 +1,107 @@
+.introductionImg {
+  width: 100%;
+  height: 367px;
+  background: url('../assets/images/Introduction_img_01.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.beforeLine {
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background-color: $body-color;
+    opacity: 0.7;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.beforeLine--Y {
+  li {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    opacity: 0.6;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 2px;
+      height: calc(100% - 20%);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: $body-color;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.cubeSzie {
+  position: relative;
+  width: 100%;
+  padding-top: calc(100% *1);
+  @include pad() {
+    width: 33.33%;
+    padding-top: calc(33.33% *1);    
+  }
+  .cubeSzie__cnt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cubeSzieImg {
+  position: relative;
+  width: 100%;
+  padding-top: calc(100% *1);
+  overflow: hidden;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    object-fit: cover;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 80%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
