@@ -8,7 +8,9 @@
 @import "helpers/mixin";
 @import "helpers/utilities";
 
-@import "components/buttons";
+@import "components/button";
+@import "components/swiper";
+@import "components/loading";
 
 @import "layout/header";
 @import "layout/footer";

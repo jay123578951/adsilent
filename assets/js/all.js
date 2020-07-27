@@ -1,16 +1,3 @@
-// $(document).ready(() => {
-//   console.log('Hello Bootstrap4');
-// });
-
-
-// // 漢堡
-// function openNav() {
-//   document.getElementById("mySidepanel").style.width = "100%";
-// }
-// function closeNav() {
-//   document.getElementById("mySidepanel").style.width = "0";
-// }
-
 // Swiper
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
@@ -19,25 +6,36 @@ var swiper = new Swiper('.swiper-container', {
   breakpoints: {
     576: {
       slidesPerView: 3,
-      //slidesPerView: 1,
     },
   },
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  // },
 });
 
-// $(document).ready(function() {
-//   rwd_fun();
-//   $(window).resize(rwd_fun);
+// Loading
+var $loading = $('#loading');
+var $progress = $('#progress');
+window.onload = () => {
+  $loading.hide();
+};
 
-//   function rwd_fun() {
-//     var width = window.innerWidth;
-//     if (width < 768) {
-//       $('#filter__modalBody').append($('#filter__content'));
-//     } else {
-//       $('#filter__block').append($('#filter__content'));
-//     }
-//   }
-// });
+// AOS
+AOS.init({
+  duration: 600,
+});
+
+//Go Top Button:
+mybutton = document.getElementById("gotopBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.opacity = "1";
+  } else {
+    mybutton.style.opacity = "0";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
